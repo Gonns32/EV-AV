@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solutions | Ethics and Environmental Impact of EV &amp; AV</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav aria-label="Main"><a class="brand" href="index.html"><img src="images/logo.png" alt="Ethics and Environmental Impact logo">EV &amp; AV</a><div class="links"><a href="index.html">HOME</a><a href="evav.html">EV/AV</a><a href="impact.html">IMPACT</a><a href="issues.html">ISSUES</a><a class=on href="solutions.html">SOLUTIONS</a><a href="sources.html">SOURCES</a></div></nav>
+
+<header class="hero" style="--bg:url(images/highway.jpg)">
+<small>SOLUTIONS</small>
+<h1>Decarbonizing Mobility &amp; <span>Pioneering Autonomous Transit</span></h1>
+<p>National and international policies, programs, and technologies that can make electric and autonomous transport cleaner, safer, and fairer.</p>
+</header>
+
+<main>
+<section class="stats" aria-label="Key statistics">
+<div class="stat"><b>1,876</b><span>Charging Stations</span><p>Registered and accredited in the Philippines as of August 2026 (Department of Energy [DOE], 2026).</p></div>
+<div class="stat"><b>29.5%</b><span>Market Share</span><p>Electrified vehicle share of Philippine sales in July 2026 (Manila Standard, 2026).</p></div>
+<div class="stat"><b>1.2 TWh</b><span>Deployment</span><p>Global EV battery deployment in 2025 (International Energy Agency [IEA], 2026).</p></div>
+<div class="stat"><b>2027</b><span>AV Roadmap</span><p>Planned full implementation of the UK Automated Vehicles Act (UK Department for Transport, 2024).</p></div>
+</section>
+
+<h2>Master Solutions Table</h2>
+<p class="sub">Search the table or click any row to jump to its detailed card.</p>
+<div class="tools">
+<input id="q" type="search" placeholder="Search solutions (e.g., battery, law, UK)..." aria-label="Search solutions">
+<button id="all">Expand / Collapse All Cards</button>
+</div>
+<div class="wrap"><table>
+<thead><tr><th>Existing Solution / Program</th><th>Definition / Scope</th><th>Current Status</th><th>Implementation &amp; Procedure</th><th>Effect / Result</th><th>Assessment (Feasibility &amp; Viability)</th></tr></thead>
+<tbody id="tb"></tbody>
+</table></div>
+
+<h2>Solution Details</h2>
+<p class="sub">National &amp; International Transport Solutions. Assessments reflect our evaluation of the cited sources.</p>
+<div id="cards"></div>
+</main>
+
+<section class="refs"><div><h2>References</h2><p>The full APA 7th edition reference list is on the <a href="sources.html">Sources</a> page.</p></div></section>
+<footer>Disclaimer: School project informing on environmental issues to spark collective action for protecting Earth's ecosystems.</footer>
+
+<script>
+const S=[
+{n:"1. Republic Act No. 11697 (EVIDA Law)",k:"Philippines",
+t:["Primary Philippine legislation governing electric vehicle (EV) fleet quotas, incentives, and development (Republic Act No. 11697, 2022).","Enacted in April 2022 to establish binding national regulatory frameworks (Republic Act No. 11697, 2022).","Mandates a 5% minimum EV share in corporate/government fleets, dedicated EV parking, and tariff cuts (Republic Act No. 11697, 2022).","Accelerates national transition from fossil fuels and builds a regulated EV market (Republic Act No. 11697, 2022)."],
+a:["High Effectiveness & Moderate Feasibility","Strong statutory force.","High upfront fleet costs."],
+d:["Primary Philippine legislation providing a comprehensive policy framework to govern the development, regulation, and adoption of electric vehicles across public and private sectors (Republic Act No. 11697, 2022).","Officially enacted in April 2022 to establish binding regulatory standards, EV fleet mandates, and development roadmaps nationwide (Republic Act No. 11697, 2022).","Mandates a 5% minimum EV share in corporate and government fleets, establishes dedicated EV parking slots with charging stations, and grants fiscal and non-fiscal incentives such as tariff exemptions and registration priority (Republic Act No. 11697, 2022).","Accelerates the national transition away from fossil-fuel reliance, promotes sustainable urban transport, and establishes a regulated market for electric mobility and local charging networks (Republic Act No. 11697, 2022).","Highly effective legislative tool establishing binding national quotas, though transport cooperatives face high upfront capital costs when swapping legacy diesel jeepneys for modern electric units."]},
+{n:"2. LTO / DOTr Implementing Rules and Regulations (IRR) of RA 11697",k:"Philippines",
+t:["Official administrative rules detailing compliance, licensing, and safety inspections for EVs (Land Transportation Office [LTO], 2023).","Promulgated by DOTr and LTO to guide agency enforcement and public safety standards (LTO, 2023).","Outlines vehicle registration steps, electrical code compliance, and charging fee rules (LTO, 2023).","Ensures legal clarity, standardized safety, and compliance on public roads (LTO, 2023)."],
+a:["High Regulatory Value & Bureaucratic Risk","Protects consumer safety.","Permit delays in rural areas."],
+d:["Promulgated by the Department of Energy (DOE) and Department of Transportation (DOTr) through the Land Transportation Office (LTO) to operationalize EVIDA by detailing compliance guidelines and registration procedures (LTO, 2023).","Promulgated and published by DOTr and LTO to guide agency enforcement, vehicle registration protocols, and public safety standards (LTO, 2023).","Establishes compliance rules for EV registration, licensing, safety inspections, charging station installation guidelines, and penalty structures for non-compliant fleet operators (LTO, 2023).","Ensures operational safety, legal clarity, and standardized technical compliance for electric vehicles and charging station infrastructure on Philippine roads (LTO, 2023).","Operationalizes safety protocols and mandatory charging installations, though strict inspection rules can slow down small-scale charging deployments in rural municipalities."]},
+{n:"3. Comprehensive Roadmap for the Electric Vehicle Industry (CREVI)",k:"Philippines",
+t:["Official national blueprint setting short-, medium-, and long-term EV targets through 2040 (Clean Air Asia, 2023).","Submitted to DOE; 1,876 registered EV charging stations accredited as of August 2026 (Clean Air Asia, 2023; DOE, 2026).","Expands highway fast-charging networks and supports local battery assembly hubs (Clean Air Asia, 2023).","Reduces urban air pollution (NOₓ, PM₂.₅) and strengthens energy security (Clean Air Asia, 2023; IEA, 2024)."],
+a:["High Strategic Value & Grid Dependency","Clear 2040 roadmap.","Net gain depends on clean power grid."],
+d:["The official national plan submitted to the DOE outlining phased short-, medium-, and long-term targets for EV deployment, charging infrastructure, and industry development through 2040 (Clean Air Asia, 2023).","Submitted to the DOE as a national guiding strategy coordinating public-private investments; the DOE reports 1,876 registered EV charging stations accredited nationwide as of August 2026 (Clean Air Asia, 2023; DOE, 2026).","Sets structured targets for EV penetration, mandates the systematic installation of public charging stations along primary transport corridors, and coordinates local manufacturing initiatives (Clean Air Asia, 2023).","Establishes a predictable long-term pathway for private sector investment, reduces urban air pollution (NOₓ, PM₂.₅), and strengthens national energy security (Clean Air Asia, 2023; IEA, 2024).","Outlines clear deployment targets through 2040, but environmental gain is constrained if grid energy relies heavily on coal power."]},
+{n:"4. Local EV Market Adoption (CAMPI / TMA Data)",k:"Philippines",
+t:["Commercial market uptake of electrified vehicles tracked via joint automotive reports (Manila Standard, 2026).","Vehicle sales hit a 2026 peak of 42,880 units in July 2026 (Manila Standard, 2026).","Driven by global fuel price spikes, tax relief, and expanding vehicle options (Manila Standard, 2026).","Captured 29.5% market share in July 2026, lowering street-level exhaust (Manila Standard, 2026)."],
+a:["High Demand & Infrastructure Lag","Rapid real-world adoption.","Public chargers must catch up."],
+d:["Commercial market adoption of electrified vehicles in the Philippines, tracked via monthly joint industry sales reports from CAMPI and TMA (Manila Standard, 2026).","Philippine vehicle sales hit a 2026 record high of 42,880 units in July 2026, with electrified vehicle sales surging by 161.8% year-over-year (Manila Standard, 2026).","Consumer and fleet adoption is driven by rising global fuel prices, expanded model availability from auto manufacturers, and regulatory backing under EVIDA incentives (Manila Standard, 2026).","Reached a 29.5% market share in July 2026 (7,086 units sold vs. 2,707 in July 2025), significantly lowering street-level carbon emissions from private commuting (Manila Standard, 2026).","Demonstrates rapid real-world EV adoption, though rapid vehicle sales risk outpacing the physical installation rate of public fast-charging stations."]},
+{n:"5. Second-Life EV Battery Repurposing",k:"International",
+t:["Reusing EV batteries that are no longer suitable for vehicles in stationary energy storage (Recharged, n.d.).","Recognized as part of a circular economy, with growing investment in repurposing technology (Recharged, n.d.).","Retired batteries are reused in stationary energy storage systems (Recharged, n.d.).","Extends battery usefulness and lowers the impact of EV production and disposal (Recharged, n.d.)."],
+a:["Useful & Feasible","Maximizes battery utility.","Requires thorough cell testing."],
+d:["Reusing EV batteries that are no longer suitable for vehicles in stationary energy storage systems (Recharged, n.d.).","Recognized as part of a circular economy, with significant investment in repurposing and recycling technologies (Recharged, n.d.).","Retired batteries are reused in stationary energy storage systems, extending their usefulness (Recharged, n.d.).","Extends battery usefulness and reduces the environmental impact of EV production and end-of-life disposal (Recharged, n.d.).","Effective when batteries are carefully inspected for safety and reused for energy storage prior to recycling."]},
+{n:"6. Battery Life-Cycle Assessment & Recycling",k:"International",
+t:["Material recovery programs collecting and recycling end-of-life battery cells (IEA, 2026).","Expanding globally; global battery deployment reached 1.2 TWh in 2025 (IEA, 2026).","Collects spent cells, extracts raw minerals (lithium, cobalt, nickel), and measures emissions (IEA, 2026).","Reduces mining demand and limits hazardous waste contamination (IEA, 2026)."],
+a:["Potentially Sustainable","Recovers critical minerals.","Limited returned battery supply."],
+d:["Programs promoting battery reuse, material recovery, and environmental impact measurement to reduce waste and raw material extraction (IEA, 2026).","Operating and expanding globally; global EV battery deployment reached 1.2 terawatt-hours in 2025, increasing demand for recycling capacity (IEA, 2026).","Collects used batteries, evaluates reuse options, recovers valuable minerals (lithium, cobalt, nickel), and measures emissions from manufacturing through disposal (IEA, 2026).","Helps reduce hazardous waste, recovers critical materials, and limits environmental impacts across the manufacturing supply chain (IEA, 2026).","Highly effective for recovering valuable materials, but success depends on establishing local recycling facilities and safe battery handling."]},
+{n:"7. NHTSA Automated Driving Systems (ADS) Guidance",k:"United States",
+t:["Voluntary safety framework evaluating autonomous vehicle systems and hazard handling (National Highway Traffic Safety Administration [NHTSA], n.d.).","Available and actively used as voluntary US safety guidance (NHTSA, n.d.).","Tests system operating limits, hazard perception, fallback steps, and cybersecurity (NHTSA, n.d.).","Helps manufacturers identify defect risks and supports safety investigations (NHTSA, n.d.)."],
+a:["Promising & Testing-Dependent","Identifies safety defects early.","Voluntary compliance limits force."],
+d:["Voluntary safety guidelines (such as Automated Driving Systems 2.0: A Vision for Safety) helping manufacturers assess autonomous vehicle safety and identify risks (NHTSA, n.d.).","Available and actively utilized as voluntary safety guidance by automotive manufacturers (NHTSA, n.d.).","Tests system operating limits, hazard detection, automated fallback procedures, incident investigation protocols, and cybersecurity measures (NHTSA, n.d.).","Helps manufacturers identify risks and supports safety defect investigations and recalls without guaranteeing accident-free driving (NHTSA, n.d.).","Effective for identifying safety risks early, though success relies on continuous testing, accurate data, and timely problem correction."]},
+{n:"8. UK Automated Vehicles Act Implementation",k:"United Kingdom",
+t:["Comprehensive legislative framework regulating self-driving vehicle authorization and liability (UK Department for Transport, 2024).","Enacting UK framework toward full implementation by 2027 (UK Department for Transport, 2024).","Establishes vehicle authorization rules, legal safety duties, and incident investigation protocols (UK Department for Transport, 2024).","Creates a clear pathway for regulating autonomous transport and establishing liability (UK Department for Transport, 2024)."],
+a:["High Technical Potential & Safety Barriers","Clarifies legal accountability.","Requires continuous safety testing."],
+d:["Comprehensive regulatory framework established by the UK Automated Vehicles Act 2024 to regulate self-driving vehicles and clarify legal responsibilities (UK Department for Transport, 2024).","Currently implementing regulatory rules, with the full implementation programme planned for full rollout by 2027 (UK Department for Transport, 2024).","Develops vehicle authorization rules, establishes safety responsibilities, supports controlled testing, and develops incident investigation and cybersecurity arrangements (UK Department for Transport, 2024).","Creates a clear pathway for regulating self-driving vehicles, improving driverless safety, and defining legal accountability (UK Department for Transport, 2024).","Promotes vehicle safety and addresses ethical risks (AI bias, privacy, liability), though success depends on strict enforcement and continuous testing."]}
+];
+const L=["Scope / Definition","Current Status","Implementation","Effect / Result","Assessment"];
+const tb=document.getElementById("tb"),cd=document.getElementById("cards");
+S.forEach((s,i)=>{
+ const tr=document.createElement("tr");tr.dataset.i=i;
+ tr.innerHTML=`<td class="n">${s.n}<br><span class="tag">${s.k}</span></td>`+s.t.map(x=>`<td>${x}</td>`).join("")+`<td><b>${s.a[0]}</b><ul class="pc"><li><b>Pros:</b> ${s.a[1]}</li><li><b>Cons:</b> ${s.a[2]}</li></ul></td>`;
+ tr.onclick=()=>{const c=document.getElementById("s"+i);c.open=true;c.scrollIntoView({behavior:"smooth",block:"start"})};
+ tb.appendChild(tr);
+ const dt=document.createElement("details");dt.className="card";dt.id="s"+i;dt.dataset.i=i;
+ dt.innerHTML=`<summary><span class="num">${i+1}</span>${s.n.replace(/^\d+\. /,"")}<span class="badge">${s.a[0]}</span></summary><div class="body">`+s.d.map((x,j)=>`<div><h4>${L[j]}</h4><p>${j==4?"<b>"+s.a[0]+".</b> ":""}${x}</p></div>`).join("")+`</div>`;
+ cd.appendChild(dt);
+});
+document.getElementById("q").oninput=e=>{const v=e.target.value.toLowerCase();
+ document.querySelectorAll("tbody tr,.card").forEach(el=>{el.style.display=el.textContent.toLowerCase().includes(v)?"":"none"})};
+let open=false;document.getElementById("all").onclick=()=>{open=!open;document.querySelectorAll(".card").forEach(c=>c.open=open)};
+
+</script>
+<script src="script.js"></script></body>
+</html>
