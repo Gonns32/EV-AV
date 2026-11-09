@@ -154,3 +154,36 @@ main{position:relative;z-index:2}
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media(max-width:900px){nav .links{gap:4px 14px;font-size:12px}}
+
+/* ===== Courses of Action: side panel + equal-height cards ===== */
+.coa{display:grid;grid-template-columns:260px 1fr;gap:20px;margin:0 0 30px;align-items:stretch}
+.coa-side{background:linear-gradient(160deg,#0b3d5c 0%,#1565c0 62%,#19d46b 130%);color:#fff;border-radius:20px;padding:26px 22px;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 24px rgba(11,61,92,.25);position:relative;overflow:hidden}
+.coa-side::after{content:"";position:absolute;right:-40px;bottom:-40px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.1)}
+.coa-side .g-ico{font-size:42px;line-height:1}
+.coa-side .g-label{font-size:12px;letter-spacing:.16em;font-weight:700;color:#7dffb4}
+.coa-side h3{margin:0;font-size:22px;line-height:1.25}
+.coa-side .g-count{margin-top:auto;align-self:flex-start;font-size:12.5px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:5px 13px;position:relative;z-index:1}
+.coa-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;align-items:stretch}
+.ac{background:#fff;border-radius:16px;padding:20px 20px 18px;box-shadow:0 6px 20px rgba(0,0,0,.07);border-top:4px solid var(--g);display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box;transition:transform .25s,box-shadow .25s}
+.ac:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,0,0,.12)}
+.ac-top{display:flex;align-items:center;justify-content:space-between}
+.ac-top .ic{margin:0;width:42px;height:42px}
+.ac-n{font-size:11px;letter-spacing:.14em;font-weight:700;color:#1565c0;background:#e6f2ec;border-radius:99px;padding:4px 10px}
+.ac h4{margin:4px 0 0;font-size:16.5px;line-height:1.3;color:#0b3d5c}
+.ac p{margin:0;font-size:14.5px;line-height:1.6;color:#334}
+.ac ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.55;color:#334}
+.ac li{margin-bottom:8px}
+.coa .rv,.ac.rv{transform:none}
+#synthesis .grid,#advocacy .grid{align-items:stretch}
+#synthesis .tile.rv,#advocacy .tile.rv{transform:none;height:100%;box-sizing:border-box}
+@media(max-width:860px){.coa{grid-template-columns:1fr}.coa-side{flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 14px}.coa-side h3{flex:1 1 100%;order:3}.coa-side .g-count{margin-top:0;margin-left:auto}}
+.ac-top .ic{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1565c0,#19d46b);font-size:21px;box-shadow:0 4px 12px rgba(21,101,192,.3);margin:0;transition:transform .3s}
+.ac:hover .ac-top .ic{transform:rotate(-8deg) scale(1.12)}
+
+/* Root-cause fix: the reveal class "in" shares its name with the page container (.in{max-width;margin:auto}),
+   so revealed cards got auto margins, which stopped them from stretching and shifted them off-line. */
+.grid>.rv.in,.sgrid>.rv.in,.two>.rv.in,.coa>.rv.in,.coa-cards>.rv.in,.stats>.rv.in{margin:0;max-width:none}
+
+.coa-side{align-self:start;position:sticky;top:84px;min-height:210px}
+.coa-side .g-count{margin-top:14px}
+@media(max-width:860px){.coa-side{position:relative;top:0;min-height:0}}
