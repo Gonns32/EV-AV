@@ -138,3 +138,19 @@ h2.rv::after,section h2::after{content:"";display:block;width:56px;height:4px;ma
 /* Fix: keep stat cards above the hero banner (cards were being covered) */
 .stats{position:relative;z-index:3}
 main{position:relative;z-index:2}
+
+/* ===== Take Action page ===== */
+.ic.ico{font-size:22px;box-shadow:0 4px 12px rgba(21,101,192,.3);transition:transform .3s}
+.tile:hover .ic.ico{transform:rotate(-8deg) scale(1.12)}
+.tile ul{margin:10px 0 0;padding-left:20px;font-size:14.5px;color:#334;line-height:1.55}
+.tile li{margin-bottom:9px}
+.tile.act p{line-height:1.6}
+.tile.act ul{margin-top:0}
+.tile.act p:empty{display:none}
+.grp{font-size:21px;margin:34px 0 14px;color:#0b3d5c;display:flex;align-items:center;gap:8px}
+.grp:first-of-type{margin-top:8px}
+.tile p+p{margin-top:10px}
+.banner .cta{display:inline-block}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:900px){nav .links{gap:4px 14px;font-size:12px}}

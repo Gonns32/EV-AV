@@ -4,11 +4,11 @@ document.documentElement.classList.add("js");const o=new IntersectionObserver(e=
 var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /* 1. Icons in the nav */
-var nav={"HOME":"🏠","EV/AV":"⚡","IMPACT":"📊","ISSUES":"⚠️","SOLUTIONS":"💡","SOURCES":"📚"};
+var nav={"HOME":"🏠","EV/AV":"⚡","IMPACT":"📊","ISSUES":"⚠️","SOLUTIONS":"💡","TAKE ACTION":"✊","SOURCES":"📚"};
 document.querySelectorAll("nav .links a").forEach(function(a){var e=nav[a.textContent.trim()];if(e)a.insertAdjacentHTML("afterbegin","<span class='ni' aria-hidden='true'>"+e+"</span>")});
 
 /* 2. Icons in the round tile badges (keeps the step number as a small badge) */
-var ic={"sensors":"📡","processing":"🧠","actuators":"⚙️","platooning":"🚚","longer trips":"🛣️","less parking":"🅿️","empty vehicles":"🚗","awareness":"📢","critical evaluation":"⚖️","ethical dialogue":"💬","home":"🏠","ev/av":"⚡","impact":"📊","issues":"⚠️","solutions":"💡","sources":"📚"};
+var ic={"sensors":"📡","processing":"🧠","actuators":"⚙️","platooning":"🚚","longer trips":"🛣️","less parking":"🅿️","empty vehicles":"🚗","awareness":"📢","critical evaluation":"⚖️","ethical dialogue":"💬","home":"🏠","ev/av":"⚡","impact":"📊","issues":"⚠️","solutions":"💡","take action":"✊","sources":"📚"};
 document.querySelectorAll(".tile .ic").forEach(function(el){var h=el.parentNode.querySelector("h3");if(!h)return;var e=ic[h.textContent.trim().toLowerCase()];if(e){el.setAttribute("data-n",el.textContent.trim());el.textContent=e;el.classList.add("emo")}});
 
 /* 3. Icons on the small info chips */
